@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1>
+                {{ races[0].Results[0].Driver.givenName }} {{ races[0].Results[0].Driver.familyName }}
+                <small>{{ season }} season</small>
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div clas="col-xs-12">
+        <div class="clearfix"></div>
+        <dl class="dl-horizontal">
+            <dt>Country:</dt>
+            <dd>{{ races[0].Results[0].Driver.nationality }}</dd>
+            <dt>Team:</dt>
+            <dd>{{ races[0].Results[0].Constructor.name }}</dd>
+            <dt>DOB:</dt>
+            <dd>{{ races[0].Results[0].Driver.dateOfBirth }}</dd>
+            <dt>Bio:</dt>
+            <dd>
+                <a href="{{ races[0].Results[0].Driver.url }}" target="_blank">
+                    Wikipedia
+                </a>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Results</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Circuit</th>
+                    <th>Grid</th>
+                    <th>Position</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="race in races" ng-class="{'status--dnf': race.Results[0].status != 'Finished'}" class="position--{{ race.Results[0].positionText }}">
+                    <td>{{ $index + 1 }}</td>
+                    <td class="flag flag--{{ race.Circuit.Location.country }}">{{ race.Circuit.Location.locality }}</td>
+                    <td>{{ race.Results[0].grid }}</td>
+                    <td>{{ race.Results[0].position }}</td>
+                    <td ng-show="race.Results[0].status == 'Finished'">
+                        {{ race.Results[0].Time.time }}
+                    </td>
+                    <td ng-hide="race.Results[0].status == 'Finished'">
+                        DNF - {{ race.Results[0].status }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

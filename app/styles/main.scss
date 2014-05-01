@@ -1,0 +1,212 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+$races: Australia, Malaysia, China, Bahrain, Spain, Monaco, Canada, UK, Germany, Hungary, Belgium, Italy, Singapore, Korea, Japan, India, United, USA, Brazil;
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  background: #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Drivers Page */
+
+td {
+  padding-bottom: 6px !important;
+  padding-top: 6px !important;
+}
+
+td.flag {
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 56px !important;
+}
+
+@each $race in $races {
+
+  .flag--#{$race} {
+    background-image: url(/images/flags/#{$race}.png);
+  }
+}
+
+// .flag--Germany,
+// .flag--German {
+//   background-image: url(/images/flags/Germany.png);
+// }
+
+// .flag--Spain,
+// .flag--Spanish {
+//   background-image: url(/images/flags/Spain.png);
+// }
+
+// .flag--Australia,
+// .flag--Australian {
+//   background-image: url(/images/flags/Australia.png);
+// }
+
+// .flag--Brazil,
+// .flag--Brazilian {
+//   background-image: url(/images/flags/Brazil.png);
+// }
+
+// .flag--UK,
+// .flag--British {
+//   background-image: url(/images/flags/UK.png);
+// }
+
+// .flag--Finnish {
+//   background-image: url(/images/flags/Finland.png);
+// }
+
+// .flag--French {
+//   background-image: url(/images/flags/France.png);
+// }
+
+// .flag--Mexican {
+//   background-image: url(/images/flags/Mexico.png);
+// }
+
+// .flag--Scottish {
+//   background-image: url(/images/flags/Scotland.png);
+// }
+
+// .flag--Venezuelan {
+//   background-image: url(/images/flags/Venezuela.png);
+// }
+
+// .flag--Dutch {
+//   background-image: url(/images/flags/Netherlands.png);
+// }
+
+// .flag--Canada {
+//   background-image: url(/images/flags/Canada.png);
+// }
+
+// .flag--Monaco {
+//   background-image: url(/images/flags/Monaco.png);
+// }
+
+// .flag--USA {
+//   background-image: url(/images/flags/USA.png);
+// }
+
+// .flag--Belgium {
+//   background-image: url(/images/flags/Belgium.png);
+// }
+
+// .flag--Italy {
+//   background-image: url(/images/flags/Italy.png);
+// }
+
+// .flag--China {
+//   background-image: url(/images/flags/China.png);
+// }
+
+// .flag--Korea {
+//   background-image: url(/images/flags/Korea.png);
+// }
+
+// .flag--Singapore {
+//   background-image: url(/images/flags/Singapore.png);
+// }
+
+// .flag--Malaysia {
+//   background-image: url(/images/flags/Malaysia.png);
+// }
+
+// .flag--Japan {
+//   background-image: url(/images/flags/Japan.png);
+// }
+
+// .flag--Hungary {
+//   background-image: url(/images/flags/Hungary.png);
+// }
+
+// .flag--India {
+//   background-image: url(/images/flags/India.png);
+// }
+
+// .flag--Bahrain {
+//   background-image: url(/images/flags/Bahrain.png);
+// }
+
+// .flag--United.Arab.Emirates {
+//   background-image: url(/images/flags/UAE.png);
+// }
+
+.position--1 {
+
+  td {
+    background-color: #dff0d8 !important;
+  }
+}
+
+.status--dnf {
+
+  td {
+    background-color: #f2dede !important;
+  }
+}
