@@ -41,7 +41,7 @@ angular.module('angularF1app.controllers', [])
 
         ergastAPIservice.getDriverRaces($scope.season, $scope.id).success(function (response) {
             $scope.races = response.MRData.RaceTable.Races;
-        })
+        });
     })
     .controller('teamController', function ($scope, $routeParams, ergastAPIservice) {
         $scope.id = $routeParams.id;
