@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     cleanhtml = require('gulp-cleanhtml'),
     minifycss = require('gulp-minify-css'),
-    htmlreplace = require('gulp-htmlreplace'),
+    htmlreplace = require('gulp-html-replace'),
     livereload = require('gulp-livereload');
 
 gulp.task('serve', function () {
